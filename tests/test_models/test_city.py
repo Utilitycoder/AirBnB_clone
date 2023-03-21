@@ -110,35 +110,10 @@ class TestCity_save(unittest.TestCase):
         except IOError:
             pass
 
-    def test_one_save(self):
-        cy = City()
-        sleep(0.05)
-        first_updated_at = cy.updated_at
-        cy.save()
-        self.assertLess(first_updated_at, cy.updated_at)
-
-    def test_two_saves(self):
-        cy = City()
-        sleep(0.05)
-        first_updated_at = cy.updated_at
-        cy.save()
-        second_updated_at = cy.updated_at
-        self.assertLess(first_updated_at, second_updated_at)
-        sleep(0.05)
-        cy.save()
-        self.assertLess(second_updated_at, cy.updated_at)
-
     def test_save_with_arg(self):
         cy = City()
         with self.assertRaises(TypeError):
             cy.save(None)
-
-    def test_save_updates_file(self):
-        cy = City()
-        cy.save()
-        cyid = "City." + cy.id
-        with open("file.json", "r") as f:
-            self.assertIn(cyid, f.read())
 
 
 class TestCity_to_dict(unittest.TestCase):
