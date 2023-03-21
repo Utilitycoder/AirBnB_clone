@@ -9,6 +9,7 @@
   border-radius: 4px;
   height: 70px;
   width: 100%;
+  padding-bottom: 10px;
 }
 
 /* Search button style */
@@ -57,9 +58,9 @@
 
 /* Header 3 style */
 .filters h3 {
-  font-size: 1.17em;
+  font-size: 14px;
   font-weight: 600;
-  height: 50%;
+  height: 25%;
   padding: 15.5px 0 0 30px;
 }
 
@@ -67,6 +68,6 @@
 .filters h4 {
   font-size: 14px;
   font-weight: 400;
-  height: 50%;
-  padding: 4.5px 0 12px 30px;
+  height: 25%;
+  padding: 4.5px 0 15px 30px;
 }
